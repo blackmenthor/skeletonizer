@@ -127,6 +127,8 @@ abstract class Skeletonizer extends StatefulWidget {
   @override
   State<Skeletonizer> createState() => SkeletonizerState();
 
+  final scrollController = ScrollController();
+
   /// Depends on the the nearest SkeletonizerScope if any
   static SkeletonizerScope? maybeOf(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<SkeletonizerScope>();

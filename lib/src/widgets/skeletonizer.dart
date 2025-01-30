@@ -127,8 +127,6 @@ abstract class Skeletonizer extends StatefulWidget {
   @override
   State<Skeletonizer> createState() => SkeletonizerState();
 
-  final scrollController = ScrollController();
-
   /// Depends on the the nearest SkeletonizerScope if any
   static SkeletonizerScope? maybeOf(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<SkeletonizerScope>();
@@ -163,6 +161,10 @@ class SkeletonizerState extends State<Skeletonizer>
   late bool _enabled = widget.enabled;
 
   SkeletonizerConfigData? _config;
+
+  final scrollController = ScrollController();
+
+  final sampleKey = '61111123cKD0EAZtYNzIcPRv5NYeBQueRSUclA5os0fF0D7BVzpGc06TNCLJQQJ99BAACAAAAAGiokKAAASAZDOttgM';
 
   double get _animationValue => _animationController?.value ?? 0.0;
 
